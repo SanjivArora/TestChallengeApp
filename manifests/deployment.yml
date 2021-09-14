@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: testchallengeapp 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: testchallengeapp
+  template:
+    metadata:
+      labels:
+        app: testchallengeapp 
+    spec:
+      containers:
+        - name: testchallengeapp 
+          image: techchallengeappcrg.azurecr.io/testchallengeapp
+          ports:
+          - containerPort: 8080
