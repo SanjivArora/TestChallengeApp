@@ -11,12 +11,12 @@ resources:
 variables:
 
   # Container registry service connection established during pipeline creation
-  dockerRegistryServiceConnection: '58352cb7-6be9-42f5-af06-c85199308c60'
+  dockerRegistryServiceConnection: '8445c4a1-46c3-4910-bd69-2c656d1ee0ba'
   imageRepository: 'testchallengeapp'
-  containerRegistry: 'techchallengeappcrg.azurecr.io'
+  containerRegistry: 'techchallengeappacr.azurecr.io'
   dockerfilePath: '**/Dockerfile'
   tag: '$(Build.BuildId)'
-  imagePullSecret: 'techchallengeappcrg113487fa-auth'
+  imagePullSecret: 'techchallengeappacrb43d-auth'
 
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -53,7 +53,7 @@ stages:
     displayName: Deploy
     pool:
       vmImage: $(vmImageName)
-    environment: 'SanjivAroraTestChallengeApp-2010.default'
+    environment: 'SanjivAroraTestChallengeApp-9951.default'
     strategy:
       runOnce:
         deploy:
