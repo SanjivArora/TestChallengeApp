@@ -8,7 +8,7 @@ jobs:
       - azure-acr/build-and-push-image:
           login-server-name: TechChallengeAppCR.azurecr.io
           registry-name: TechChallengeAppCR
-          repo: https://sadevops0427@dev.azure.com/sadevops0427/TechChallengeApp/_git/TestChallengeApp.git.sanjiv.arora
+          repo: testchallengeapp
           tag: $CIRCLE_TAG
 jobs:
   build:
